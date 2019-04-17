@@ -53,7 +53,6 @@
 ## SEO (Search Engine Optimization)
 - How to make your website available for SEO .. refer https://www.udemy.com/design-and-develop-a-killer-website-with-html5-and-css3/learn/v4/t/lecture/2620104?start=1
 
-
 ## Typography [choosing-font-udemy](https://www.udemy.com/design-and-develop-a-killer-website-with-html5-and-css3/learn/v4/t/lecture/2551696?start=0)
 - Font-Size:
 	* Content(parapgraphs) font-size should always be between 15 and 25 px
@@ -77,6 +76,12 @@
 - Choosing base color(don't limit to these)
 	* Red, Orange, Yellow, Green, Blue, Purple, Pink, Brown
 
-
 ## Images [choosing-images-font-udemy](https://www.udemy.com/design-and-develop-a-killer-website-with-html5-and-css3/learn/v4/t/lecture/2551700?start=0)
 - Put text directly over the image but make sure the image is dark and the text is white
+
+## Hosting on Github
+- Project should have `index.html` file and it should be directly under project root
+- Create the repo and push the changes
+- Go to repo on Github and click on `Settings` tab
+- Under `Github pages` select `Source` as `master` branch then a url gets published something like https://amarnath510.github.io/css-responsive-tutorial/. Open it to view your static page
+- Reference: [Static Pages Hosting](https://www.youtube.com/watch?v=xmjXxJww9QU&feature=youtu.be)
