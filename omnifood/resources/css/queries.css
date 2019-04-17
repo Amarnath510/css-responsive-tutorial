@@ -1,0 +1,78 @@
+
+/* Big Tablets to Desktops - (<= 1200px)
+   NOTE: Our row (in style.css) is of width 1140px that is like the max of the screen.
+*/
+@media only screen and (max-width: 1200px) {
+  /* To fix main header text */
+  .hero-text-box { width: 100%; padding: 0 2%; }
+  /* To fix nav bar */
+  .row { padding: 0 2%; }
+}
+
+/* Small Tablets to Big Tablets - (<= 1023px) */
+@media only screen and (max-width: 1023px) {
+  /* To reduce font */
+  html { font-size: 18px; }
+  /* Reduce padding of sections */
+  section { padding: 60px 0; }
+  /* Increase the width so that the text stretches */
+  .long-copy { width: 80%; margin-left: 15%; }
+  .steps-box:first-child { margin-top: 5px; }
+  .steps-box:last-child { margin-top: 20px; }
+  .works-step { margin-bottom: 30px; }
+  .works-step:last-of-type { margin-bottom: 40px; }
+  /* Icons */
+  .icon-small { width: 17px; }
+  .city-feature { font-size: 80%; }
+  /* Sign up card or Plan box */
+  .sign-up-card { width: 100%; margin-left: 0; }
+  /* Plan Price */
+  .plan-price { font-size: 200%; margin-bottom: 5px; }
+  /* Font size */
+  .sign-up-card ul li { font-size: 80%; }
+}
+
+/* Small Phones to small Tablets - (<= 768px) */
+@media only screen and (max-width: 768px) {
+  html { font-size: 18px; }
+  section { padding: 30px 0; }
+  h1 { font-size: 180%; }
+  h2 { font-size: 150%; }
+  .row,
+  .hero-text-box { padding: 0 4%; }
+  .col { width: 100%; margin-left: 0; }
+  .box { margin-bottom: 10px; }
+  .works-step { margin-bottom: 30px; }
+  .works-step:nth-last-of-type(2) { margin-bottom: 40px; }
+  /* For nav bar */
+  .main-nav { display: none; }
+  .main-nav { float: left; margin-top: 25px; }
+  .mobile-nav-icon { display: inline-block; }
+  .main-nav li { display: block; padding: 10px 0; }
+  .main-nav li a:link,
+  .main-nav li a:visited {
+    display: block;
+    border: none;
+    padding: 2px 0;
+  }
+  .sticky-nav .main-nav { margin-top: 10px; }
+  .sticky-nav .mobile-nav-icon i { color: #555; }
+  .long-copy { width: 100%; margin-left: 0; }
+  .steps-box:first-child { text-align: center; }
+  cite { margin-top: 5px; margin-bottom: 30px; margin-left: 10px; }
+}
+
+/* Small Phones - (0 to 480px) */
+@media only screen and (max-width: 480px) {
+  html { font-size: 16px; }
+  h1 { font-size: 160%; }
+  h2 { font-size: 130%; }
+  section { padding: 10px 0; }
+  .contact-form { width: 100%; }
+  .contact-form div { margin-bottom: 5px; }
+  .contact-form-submit { text-align: center; }
+  blockquote::before { display: none; }
+  .sign-up-card { margin-bottom: 10px; }
+  .section-steps-btn-apps img { height: 40px; }
+  .section-steps-btn-apps { text-align: center; }
+}

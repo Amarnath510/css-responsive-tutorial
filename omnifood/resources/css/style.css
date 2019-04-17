@@ -1,0 +1,608 @@
+/* 
+  - NOTE: Do not change any styles of Vendor classes here instead define your own
+
+  - Responsive screen breakpoints
+    0 - 480px, 480 - 768px, 768 - 1024px, 1024 - 1200px 
+*/
+
+/*----------------------------------------------*/
+/* Global Styling */
+/*----------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+html {
+  background: #FFF;
+  color: #555;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+
+.clearfix { zoom: 1; }
+.clearfix:after {
+  content: '.';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/*----------------------------------------------*/
+/* Reusable Components                          */
+/*----------------------------------------------*/
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 80px 0;
+}
+
+h1, h2, h3 {
+  font-weight: 300; /* When font is high reduce the font-weight of the element */
+  text-transform: uppercase;
+}
+
+h1 {
+  color: #FFFFFF;
+  font-size: 200%; /* base font of html is 20px so this one will be 200% of it => 40px */
+  margin-top: 0;
+  margin-bottom: 10px;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 120%;
+  margin-bottom: 15px;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 150px;
+  background-color: #e67e22;
+  margin: 20px auto 30px auto;
+}
+
+
+/* ------ LINKS ------ */
+a:link,
+a:visited {
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid #e67e22;
+  padding-bottom: 3px;
+  -webkit-transition: border-bottom 0.5s, color 0.5s;
+  transition: border-bottom 0.5s, color 0.5s;
+}
+
+a:hover,
+a:active {
+  color: #555;
+  border-bottom: 1px solid transparent;
+}
+
+/* ------ BUTTONS ------ */
+.btn:link,
+.btn:visited,
+input[type="submit"] {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  -webkit-transition: background-color 0.5s, border 0.5s, color 0.5s;
+  transition: background-color 0.5s, border 0.5s, color 0.5s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type="submit"] {
+  background-color: #e67e22;
+  border: 1px solid #e67e22;
+  color: white;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #e67e22;
+  color: #e67e22;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  color: #FFFFFF;
+}
+
+.btn:hover,
+.btn:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+  background-color: #cf6d17;
+}
+
+/* PARAGRAPHS */
+.long-copy {
+  width: 70%;
+  margin-left: 15%;
+}
+
+.box p {
+  font-size: 90%;
+  line-height: 140%;
+}
+
+.icon-big {
+  color: #e67e22;
+  display: block;
+  font-size: 300%;
+  margin-bottom: 10px;
+}
+
+.icon-small {
+  color: #e67e22;
+  display: inline-block;
+  font-size: 100%;
+  text-align: center;
+  width: 30px;
+}
+
+/*----------------------------------------------*/
+/* Features                                     */
+/*----------------------------------------------*/
+.section-features .long-copy {
+  margin-bottom: 40px;
+}
+
+/*----------------------------------------------*/
+/* Header                                       */
+/*----------------------------------------------*/
+header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.699)), to(rgba(0, 0, 0, 0.699))), url(images/hero-min.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.699)), url(images/hero-min.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.logo,
+.logo-black {
+  height: 100px;
+  width: auto;
+  float: left;
+  margin-top: 20px;
+}
+
+.logo-black { display: none; }
+
+.main-nav {
+  float: right;
+  list-style-type: none;
+  margin-top: 55px;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  padding: 10px 0;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 90%; /* Base font = 20px. Nav font should be 18px => 18/20 = 0.9 */
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom 0.5s;
+  transition: border-bottom 0.5s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid #e67e22;
+}
+
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 0 10px 0;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 2px #efefef;
+  z-index: 999;
+}
+
+.sticky-nav .main-nav li a:link,
+.sticky-nav .main-nav li a:visited {
+  color: #555;
+}
+.sticky-nav .main-nav { margin-top: 20px; }
+
+.sticky-nav .logo-black { display: block; height: 40px; margin-top: 10px; }
+.sticky-nav .logo { display: none; }
+
+.mobile-nav-icon {
+  float: right;
+  margin-top: 20px;
+  display: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-nav-icon i {
+  font-size: 200%;
+  color: #FFF;
+}
+
+/*----------------------------------------------*/
+/* Meals                                        */
+/*----------------------------------------------*/
+.meals-showcase {
+  list-style: none;
+  width: 100%;
+}
+
+.meals-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+
+.meal-photo {
+  width: 100%; /* This is not 100% of screen. Since parent of this is .meals-showcase which has full 25% hence 100% */
+  margin: 0;
+  overflow: hidden; /* When image overflows because of transform-scale to 1.15 */
+  background-color: #000000;
+}
+
+.meal-photo img {
+  width: 100%;
+  height: auto;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  opacity: 0.6;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+}
+
+.meals-section {
+  padding: 0;
+}
+
+.meal-photo img:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  opacity: 1;
+}
+
+/*----------------------------------------------*/
+/* HOW IT WORKS                                 */
+/*----------------------------------------------*/
+
+.section-steps {
+  background-color: #f4f4f4;
+}
+
+.steps-box:first-child {
+  text-align: right; /* text-align works for all inline elements .. in this case we are using for img */
+  padding-right: 3%;
+  margin-top: 30px;
+}
+
+.steps-box:last-child {
+  padding-left: 3%;
+  margin-top: 70px;
+}
+
+.app-screen {
+  width: 40%;
+}
+
+.works-step {
+  margin-bottom: 40px;
+}
+
+.works-step div {
+  color: #e67e22;
+  border: 2px solid #e67e22;
+  /* display: inline-block; */
+  padding: 10px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  float: left; /* To align it to the left */
+  font-size: 125%;
+  margin-right: 25px;
+}
+
+.works-step:last-of-type {
+  margin-bottom: 100px;
+}
+
+.btn-app img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.btn-app:link,
+.btn-app:visited {
+  border: 0;
+}
+
+/*----------------------------------------------*/
+/* CITIES                                       */
+/*----------------------------------------------*/
+.box img {
+  width: 100%;
+  height: auto;
+}
+
+.city-feature {
+  margin-bottom: 5px;
+}
+
+/*----------------------------------------------*/
+/* TESTIMONIALS                                 */
+/*----------------------------------------------*/
+.section-testimonials {
+  background-image: -webkit-gradient(linear,  left top, left bottom,  from(rgba(0, 0, 0, 0.8)),  to(rgba(0, 0, 0, 0.8))), url(images/back-customers-min.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8),  rgba(0, 0, 0, 0.8)), url(images/back-customers-min.jpg);
+  background-size: cover;
+  /* height: 80vh; */
+  background-position: center;
+  color: #FFF;
+  background-attachment: fixed;
+}
+
+blockquote {
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+  position: relative; /* To place the quote symbol along with the quote */
+}
+
+cite {
+  font-size: 90%;
+  margin-top: 25px;
+  display: block;
+}
+
+cite img {
+  /* width: 100%; */
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+blockquote::before {
+  position: absolute; /* As we want it close to the actual quote */
+  content: "\201C";
+  display: block;
+  font-size: 400%;
+  top: 0px;
+}
+
+/*----------------------------------------------*/
+/* SIGN UP                                      */
+/*----------------------------------------------*/
+
+.section-sign-up {
+  background-color: #f4f4f4;
+}
+
+.sign-up-card {
+  background-color: #FFF;
+  width: 90%;
+  margin-left: 5%;
+  -webkit-box-shadow: 0 2px 2px #efefef;
+          box-shadow: 0 2px 2px #efefef;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.sign-up-card div:last-child {
+  text-align: center;
+  padding: 10px;
+}
+
+.sign-up-card div:first-child {
+  background-color: #fcfcfc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.sign-up-card div:not(:last-of-type) {
+  padding: 15px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-price {
+  font-size: 300%;
+  font-weight: 100; /* Since we increase font size so we need to decrease font-weight */
+  margin-bottom: 10px;
+  color: #e67e22;
+}
+
+.plan-price span {
+  font-size: 30%;
+  font-weight: 300;
+}
+
+.plan-price-meal {
+  font-size: 80%;
+}
+
+.sign-up-card ul li {
+  padding: 5px 0;
+}
+
+.sign-up-card ul li i {
+  margin-right: 10px;
+}
+
+/*----------------------------------------------*/
+/* FORM                                         */
+/*----------------------------------------------*/
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #CCC;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  margin: 10px 5px 10px 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+/*----------------------------------------------*/
+/* FOOTER                                       */
+/*----------------------------------------------*/
+footer {
+  background-color: #333;
+  padding: 40px;
+  font-size: 80%;
+}
+
+.footer-nav {
+  list-style: none;
+  float: left;
+}
+
+.social-links {
+  list-style: none;
+  float: right;
+}
+
+.footer-nav li,
+.social-links li {
+  display: inline-block;
+  margin-right: 20px;
+  border: none;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+  margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+  color: #888;
+  border: 0;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+  color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 140%;
+}
+
+.fa-facebook-square,
+.fa-twitter,
+.fa-instagram {
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+/* https://www.designpieces.com/2012/12/social-media-colours-hex-and-rgb/ */
+.fa-facebook-square:hover { 
+  color: #3b5998;
+}
+
+.fa-twitter:hover { 
+  color: #55acee;
+}
+
+.fa-instagram:hover { 
+  color: #e95950;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/*----------------------------------------------*/
+/* ANIMATION                                    */
+/*----------------------------------------------*/
+.js-waypoint-1,
+.js-waypoint-2,
+.js-waypoint-3 {
+  opacity: 0;
+  animation-duration: 1s;
+}
+
+.js-waypoint-4 {
+  animation-duration: 1s;
+}
+
+.js-waypoint-1 .animated,
+.js-waypoint-2 .animated,
+.js-waypoint-3 .animated {
+  opacity: 1;
+}
