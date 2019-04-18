@@ -53,35 +53,17 @@
 ## SEO (Search Engine Optimization)
 - How to make your website available for SEO .. refer https://www.udemy.com/design-and-develop-a-killer-website-with-html5-and-css3/learn/v4/t/lecture/2620104?start=1
 
-## Typography [choosing-font-udemy](https://www.udemy.com/design-and-develop-a-killer-website-with-html5-and-css3/learn/v4/t/lecture/2551696?start=0)
-- Font-Size:
-	* Content(parapgraphs) font-size should always be between 15 and 25 px
-	* Headlines(main headings): min 60px (you can increase it depending on your taste)
-	* Titles (side headings, sub-titles): 32px
-- Line spacing(vertical distance between lines) between 120% to 150% of the your font-size
-- Number of characters per line: 45 to 90 chars
-- Font-Style: 
-	* Use only one typeface(sans | sans-serif)
-	* Best Sans-serif fonts are,
-		* Opens sans
-		* Lato
-		* Raleway
-		* Monsterrat
-		* PT Sans
-
-## Colors [choosing-color-udemy](https://www.udemy.com/design-and-develop-a-killer-website-with-html5-and-css3/learn/v4/t/lecture/2551698?start=0)
-- For choosing base colors use [Flat UI Colors](https://flatuicolors.com/)
-- Once the base color is fixed then create lighter versions of that color for color paletter. Use [0 to 255](https://www.0to255.com) and give base color as input
-- Never choose black, avoid it whenever possible
-- Choosing base color(don't limit to these)
-	* Red, Orange, Yellow, Green, Blue, Purple, Pink, Brown
-
-## Images [choosing-images-font-udemy](https://www.udemy.com/design-and-develop-a-killer-website-with-html5-and-css3/learn/v4/t/lecture/2551700?start=0)
-- Put text directly over the image but make sure the image is dark and the text is white
-
 ## Hosting on Github
 - Project should have `index.html` file and it should be directly under project root
 - Create the repo and push the changes
 - Go to repo on Github and click on `Settings` tab
 - Under `Github pages` select `Source` as `master` branch then a url gets published something like https://amarnath510.github.io/css-responsive-tutorial/. Open it to view your static page
 - Reference: [Static Pages Hosting](https://www.youtube.com/watch?v=xmjXxJww9QU&feature=youtu.be)
+
+## Google Analytics
+- [Create Google Analytics Account](https://analytics.google.com/analytics/web/)
+- Enter Website name (Some Name)
+- Enter Hosted website url (https://amarnath510.github.io/css-responsive-tutorial/)
+- Proceed to get the tracking id
+- Once you get the tracking id(which is nothing but a JS script) then paste at the end of the HTML file along with other scripts
+- Save it and then push the changes
