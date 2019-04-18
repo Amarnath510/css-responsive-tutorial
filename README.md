@@ -67,3 +67,6 @@
 - Proceed to get the tracking id
 - Once you get the tracking id(which is nothing but a JS script) then paste at the end of the HTML file along with other scripts
 - Save it and then push the changes
+- Once deployed then go to website and check whether the Google Analytics JS is present or not (Right Click --> View Page Source)
+- Now go to Google Analytics --> Home --> Check on various tabs to know the stats (Analytics itself is huge check tutorials to track
+)
